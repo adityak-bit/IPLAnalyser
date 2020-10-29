@@ -5,31 +5,31 @@ import com.opencsv.bean.CsvBindByName;
 public class BowlerStatsCSV {
 
 	@CsvBindByName(column = "POS", required = true)
-	int pos;
+	private int pos;
 	@CsvBindByName(column = "PLAYER", required = true)
-	String player;
+	private String player;
 	@CsvBindByName(column = "Mat", required = true)
-	int match;
+	private int match;
 	@CsvBindByName(column = "Inns", required = true)
-	int innings;
+	private int innings;
 	@CsvBindByName(column = "Ov", required = true)
-	double overs;
+	private double overs;
 	@CsvBindByName(column = "Runs", required = true)
-	int runs;
+	private int runs;
 	@CsvBindByName(column = "Wkts", required = true)
-	int wickets;
+	private int wickets;
 	@CsvBindByName(column = "BBI", required = true)
-	int BBI;
+	private int BBI;
 	@CsvBindByName(column = "Avg", required = true)
-	double avg;
+	private double avg;
 	@CsvBindByName(column = "Econ", required = true)
-	double economy;
+	private double economy;
 	@CsvBindByName(column = "SR", required = true)
-	double strikeRate;
+	private double strikeRate;
 	@CsvBindByName(column = "4w", required = true)
-	int fourWickets;
+	private int fourWickets;
 	@CsvBindByName(column = "5w", required = true)
-	int fiveWickets;
+	private int fiveWickets;
 	public int getPos() {
 		return pos;
 	}
