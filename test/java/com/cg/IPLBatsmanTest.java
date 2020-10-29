@@ -34,7 +34,7 @@ public class IPLBatsmanTest {
 	
 	@Test
 	public void givenBattingData_shouldReturnTopStrikingRate() {
-		sortedList = iplAnalyser.sortBattingData(battingList, BattingDataSorter.TOP_STRIKING_RATE);
+		sortedList = iplAnalyser.sortBattingData(battingList, BattingDataSorter.TOP_STRIKE_RATE);
 		Assert.assertEquals("Ishant Sharma", sortedList.get(100).getPlayer());
 	}
 }
