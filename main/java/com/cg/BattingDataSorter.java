@@ -10,4 +10,6 @@ public class BattingDataSorter {
 	public static Comparator<BatsmanStatsCSV> MAX_SIXES_AND_FOURS = Comparator
 			                                                  .comparing
 			                                                  (batsman -> batsman.getSixes() + batsman.getFours());
+	public static Comparator<BatsmanStatsCSV> BEST_SR_WITH_MAX_SIXES_AND_FOURS = MAX_SIXES_AND_FOURS
+			                                                  .thenComparing(BatsmanStatsCSV::getStrikeRate);
 }
