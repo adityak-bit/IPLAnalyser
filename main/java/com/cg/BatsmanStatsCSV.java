@@ -4,33 +4,33 @@ import com.opencsv.bean.CsvBindByName;
 
 public class BatsmanStatsCSV {
 
-	@CsvBindByName(column = "POS", required = true)
+	@CsvBindByName(column = "POS")
 	private int position;
-	@CsvBindByName(column = "PLAYER", required = true)
+	@CsvBindByName(column = "PLAYER")
 	private String player;
-	@CsvBindByName(column = "Mat", required = true)
+	@CsvBindByName(column = "Mat")
 	private int matches;
-	@CsvBindByName(column = "Inns", required = true)
+	@CsvBindByName(column = "Inns")
 	private int innings;
-	@CsvBindByName(column = "NO", required = true)
+	@CsvBindByName(column = "NO")
 	private int notOuts;
-	@CsvBindByName(column = "Runs", required = true)
+	@CsvBindByName(column = "Runs")
 	private int runs;
-	@CsvBindByName(column = "HS", required = true)
+	@CsvBindByName(column = "HS")
 	private String highestScore;
-	@CsvBindByName(column = "Avg", required = true)
+	@CsvBindByName(column = "Avg")
 	private String average;
-	@CsvBindByName(column = "BF", required = true)
+	@CsvBindByName(column = "BF")
 	private int ballsFaced;
-	@CsvBindByName(column = "SR", required = true)
+	@CsvBindByName(column = "SR")
 	private String strikeRate;
-	@CsvBindByName(column = "100", required = true)
+	@CsvBindByName(column = "100")
 	private int hundreds;
-	@CsvBindByName(column = "50", required = true)
+	@CsvBindByName(column = "50")
 	private int fiftys;
-	@CsvBindByName(column = "4s", required = true)
+	@CsvBindByName(column = "4s")
 	private int fours;
-	@CsvBindByName(column = "6s", required = true)
+	@CsvBindByName(column = "6s")
 	private int sixes;
 	public int getPosition() {
 		return position;

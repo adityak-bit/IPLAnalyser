@@ -4,45 +4,45 @@ import com.opencsv.bean.CsvBindByName;
 
 public class BowlerStatsCSV {
 
-	@CsvBindByName(column = "POS", required = true)
-	private int pos;
-	@CsvBindByName(column = "PLAYER", required = true)
+	@CsvBindByName(column = "POS")
+	private int position;
+	@CsvBindByName(column = "PLAYER")
 	private String player;
-	@CsvBindByName(column = "Mat", required = true)
-	private int match;
-	@CsvBindByName(column = "Inns", required = true)
+	@CsvBindByName(column = "Mat")
+	private int matches;
+	@CsvBindByName(column = "Inns")
 	private int innings;
-	@CsvBindByName(column = "Ov", required = true)
-	private double overs;
-	@CsvBindByName(column = "Runs", required = true)
+	@CsvBindByName(column = "Ov")
+	private String overs;
+	@CsvBindByName(column = "Runs")
 	private int runs;
-	@CsvBindByName(column = "Wkts", required = true)
+	@CsvBindByName(column = "Wkts")
 	private int wickets;
-	@CsvBindByName(column = "BBI", required = true)
+	@CsvBindByName(column = "BBI")
 	private int BBI;
-	@CsvBindByName(column = "Avg", required = true)
-	private double avg;
-	@CsvBindByName(column = "Econ", required = true)
-	private double economy;
-	@CsvBindByName(column = "SR", required = true)
-	private double strikeRate;
-	@CsvBindByName(column = "4w", required = true)
+	@CsvBindByName(column = "Avg")
+	private String average;
+	@CsvBindByName(column = "Econ")
+	private String economy;
+	@CsvBindByName(column = "SR")
+	private String strikeRate;
+	@CsvBindByName(column = "4w")
 	private int fourWickets;
-	@CsvBindByName(column = "5w", required = true)
+	@CsvBindByName(column = "5w")
 	private int fiveWickets;
-	public int getPos() {
-		return pos;
+	public int getPosition() {
+		return position;
 	}
 	public String getPlayer() {
 		return player;
 	}
 	public int getMatch() {
-		return match;
+		return matches;
 	}
 	public int getInnings() {
 		return innings;
 	}
-	public double getOvers() {
+	public String getOvers() {
 		return overs;
 	}
 	public int getRuns() {
@@ -54,13 +54,13 @@ public class BowlerStatsCSV {
 	public int getBBI() {
 		return BBI;
 	}
-	public double getAvg() {
-		return avg;
+	public String getAverage() {
+		return average;
 	}
-	public double getEconomy() {
+	public String getEconomy() {
 		return economy;
 	}
-	public double getStrikeRate() {
+	public String getStrikeRate() {
 		return strikeRate;
 	}
 	public int getFourWickets() {

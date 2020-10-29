@@ -9,7 +9,7 @@ public class IPLBatsmanTest {
 	public static final String BATSMAN_STATS_FILE_PATH = "C:/Users/91824/eclipse-workspace/IPLAnalyser/BatsmanStats.csv";
 	
 	@Test
-	public void givenBatsmanStatsCSV_ShouldReturnList() {
+	public void givenBatsmanStatsCSV_ShouldReturnList() throws IPLException {
 		CSVFileLoader csvFileLoader = new CSVFileLoader();
 		List<BatsmanStatsCSV> batsmanList = csvFileLoader.loadCSVFile(BATSMAN_STATS_FILE_PATH,BatsmanStatsCSV.class);
 		Assert.assertEquals(101, batsmanList.size());

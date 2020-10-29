@@ -9,7 +9,7 @@ public class IPLBowlerTest {
 	public static final String BOWLER_STATS_FILE_PATH = "C:/Users/91824/eclipse-workspace/IPLAnalyser/BowlerStats.csv";
 	
 	@Test
-	public void givenBowlerStatsCSV_ShouldReturnList() {
+	public void givenBowlerStatsCSV_ShouldReturnList() throws IPLException {
 		CSVFileLoader csvFileLoader = new CSVFileLoader();
 		List<BowlerStatsCSV> bowlerList = csvFileLoader.loadCSVFile(BOWLER_STATS_FILE_PATH,BowlerStatsCSV.class);
 		Assert.assertEquals(101, bowlerList.size());
