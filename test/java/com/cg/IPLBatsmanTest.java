@@ -17,13 +17,13 @@ public class IPLBatsmanTest {
 	@Before
 	public void initialize() throws IPLException {
 		iplAnalyser = new IPLAnalyser();
-		battingList = iplAnalyser.loadCSVFile(BATSMAN_STATS_FILE_PATH, BatsmanStatsCSV.class);
+		battingList = iplAnalyser.loadCsvFile(BATSMAN_STATS_FILE_PATH, BatsmanStatsCSV.class);
 		sortedList = new ArrayList<BatsmanStatsCSV>();
 	}
 	
 	@Test
 	public void givenBatsmanStatsCSV_ShouldReturnList() throws IPLException {
-		Assert.assertEquals(101, batsmanList.size());
+		Assert.assertEquals(101, battingList.size());
 	}
 	
 	@Test

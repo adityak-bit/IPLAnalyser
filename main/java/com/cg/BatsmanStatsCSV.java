@@ -53,8 +53,9 @@ public class BatsmanStatsCSV {
 	public String getHighestScore() {
 		return highestScore;
 	}
-	public String getAverage() {
-		return average;
+	public double getAverage() {
+		if(average.equals("-")) return 0.0;
+		return Double.parseDouble(average);
 	}
 	public int getBallsFaced() {
 		return ballsFaced;
