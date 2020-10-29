@@ -31,4 +31,10 @@ public class IPLBatsmanTest {
 		sortedList = iplAnalyser.sortBattingData(battingList, BattingDataSorter.TOP_BATTING_AVG);
 		Assert.assertEquals("MS Dhoni", sortedList.get(100).getPlayer());
 	}
+	
+	@Test
+	public void givenBattingData_shouldReturnTopStrikingRate() {
+		sortedList = iplAnalyser.sortBattingData(battingList, BattingDataSorter.TOP_STRIKE_RATE);
+		Assert.assertEquals("Ishant Sharma", sortedList.get(100).getPlayer());
+	}
 }

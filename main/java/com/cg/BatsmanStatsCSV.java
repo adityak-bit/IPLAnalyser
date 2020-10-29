@@ -60,8 +60,9 @@ public class BatsmanStatsCSV {
 	public int getBallsFaced() {
 		return ballsFaced;
 	}
-	public String getStrikeRate() {
-		return strikeRate;
+	public double getStrikeRate() {
+		if(strikeRate.equals("-")) return 0.0;
+		return Double.parseDouble(strikeRate);
 	}
 	public int getHundreds() {
 		return hundreds;
