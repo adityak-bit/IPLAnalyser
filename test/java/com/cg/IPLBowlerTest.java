@@ -48,4 +48,10 @@ public class IPLBowlerTest {
 		sortedList = iplAnalyser.sortBowlingData(bowlingList, BowlingDataSorter.TOP_SR_WITH_5W_AND_4W);
 		Assert.assertEquals("Alzarri Joseph", sortedList.get(100).getPlayer());
 	}
+	
+	@Test
+	public void givenBowlingData_shouldReturnTopAvgWithBestSR() {
+		sortedList = iplAnalyser.sortBowlingData(bowlingList, BowlingDataSorter.TOP_AVG_WITH_BEST_SR);
+		Assert.assertEquals("Andrew Tye", sortedList.get(98).getPlayer());
+	}
 }
