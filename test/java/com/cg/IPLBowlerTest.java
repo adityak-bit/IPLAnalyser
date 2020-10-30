@@ -42,4 +42,10 @@ public class IPLBowlerTest {
 		sortedList = iplAnalyser.sortBowlingData(bowlingList, BowlingDataSorter.TOP_ECONOMY_RATE);
 		Assert.assertEquals("Mayank Markande", sortedList.get(100).getPlayer());
 	}
+	
+	@Test
+	public void givenBowlingData_shouldReturnTopStrikeRateWith5And4Wickets() {
+		sortedList = iplAnalyser.sortBowlingData(bowlingList, BowlingDataSorter.TOP_SR_WITH_5W_AND_4W);
+		Assert.assertEquals("Alzarri Joseph", sortedList.get(100).getPlayer());
+	}
 }
