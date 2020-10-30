@@ -29,7 +29,7 @@ public class IPLAllRounderTest {
 	public void givenBattingAndBowlingData_ShouldReturnBestAvg() {
 	    sortedList = iplAnalyser.sortAllRounderData(battingList, bowlingList, AllRounderDataSorter.BEST_BATTING_AND_BOWLING_AVG);
 	    Collections.reverse(sortedList);
-		Assert.assertEquals("Krishnappa Gowtham", sortedList.get(0).getPlayer());
+		Assert.assertEquals("Shakib Al Hasan", sortedList.get(0).getPlayer());
 	}
 	
 	@Test
