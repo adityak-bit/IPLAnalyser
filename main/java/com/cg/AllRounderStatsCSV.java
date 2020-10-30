@@ -6,9 +6,9 @@ public class AllRounderStatsCSV {
 	private int runs;
 	private int wickets;
 	private double averageRuns;
-	private double averageWickets;
+	private String averageWickets;
 
-	public AllRounderStatsCSV(String player, int runs, int wickets, double averageRuns, double averageWickets) {
+	public AllRounderStatsCSV(String player, int runs, int wickets, double averageRuns, String averageWickets) {
 		this.player = player;
 		this.runs = runs;
 		this.wickets = wickets;
@@ -32,7 +32,7 @@ public class AllRounderStatsCSV {
 		return averageRuns;
 	}
 
-	public double getAverageWickets() {
+	public String getAverageWickets() {
 		return averageWickets;
 	}
 }

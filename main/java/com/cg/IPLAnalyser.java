@@ -1,5 +1,7 @@
 package com.cg;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,5 +25,25 @@ public class IPLAnalyser {
 	
 	public List<BowlerStatsCSV> sortBowlingData(List<BowlerStatsCSV> bowlingList, Comparator<BowlerStatsCSV> comparator){
 		return  bowlingList.stream().sorted(comparator).collect(Collectors.toList());
+	}
+	
+	public List<AllRounderStatsCSV> sortAllRounderData(List<BatsmanStatsCSV> battingList, List<BowlerStatsCSV> bowlingList, Comparator<AllRounderStatsCSV> comparator){
+		List<AllRounderStatsCSV> allRounderList = getAllRounderPlayers( battingList, bowlingList);
+		Collections.reverse(allRounderList);
+		return (List<AllRounderStatsCSV>) allRounderList.stream().sorted(comparator).collect(Collectors.toList());
+	}
+
+	private List<AllRounderStatsCSV> getAllRounderPlayers(List<BatsmanStatsCSV> battingList, List<BowlerStatsCSV> bowlingList) {
+		List<AllRounderStatsCSV> allRounderList = new ArrayList<>();
+		battingList.stream().forEach(batsman -> {
+			BowlerStatsCSV bowlers = bowlingList.stream()
+					.filter(bowler -> bowler.getPlayer().equalsIgnoreCase(batsman.getPlayer())).findFirst()
+					.orElse(null);
+			if (bowlers != null) {
+				allRounderList.add(new AllRounderStatsCSV(batsman.getPlayer(), batsman.getRuns(), bowlers.getWickets(),
+						batsman.getAverage(), bowlers.getAverage()));
+			}
+		});
+		return allRounderList;
 	}
 }
