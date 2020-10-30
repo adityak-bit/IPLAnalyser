@@ -60,9 +60,8 @@ public class BowlerStatsCSV {
 	public String getEconomy() {
 		return economy;
 	}
-	public double getStrikeRate() {
-		if(strikeRate.equals("-")) return 0.0;
-		return Double.parseDouble(strikeRate);
+	public String getStrikeRate() {
+		return strikeRate;
 	}
 	public int getFourWickets() {
 		return fourWickets;

@@ -30,4 +30,10 @@ public class IPLBowlerTest {
 		sortedList = iplAnalyser.sortBowlingData(bowlingList, BowlingDataSorter.TOP_BOWLING_AVG);
 		Assert.assertEquals("Anukul Roy", sortedList.get(15).getPlayer());
 	}
+	
+	@Test
+	public void givenBowlingData_shouldReturnTopStrikeRate() {
+		sortedList = iplAnalyser.sortBowlingData(bowlingList, BowlingDataSorter.TOP_BOWLING_STRIKE_RATE);
+		Assert.assertEquals("Ish Sodhi", sortedList.get(15).getPlayer());
+	}
 }
