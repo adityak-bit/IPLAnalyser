@@ -28,6 +28,6 @@ public class IPLBowlerTest {
 	@Test
 	public void givenBowlingData_shouldReturnTopBowlingAvg() {
 		sortedList = iplAnalyser.sortBowlingData(bowlingList, BowlingDataSorter.TOP_BOWLING_AVG);
-		Assert.assertEquals("Krishnappa Gowtham", sortedList.get(98).getPlayer());
+		Assert.assertEquals("Anukul Roy", sortedList.get(15).getPlayer());
 	}
 }

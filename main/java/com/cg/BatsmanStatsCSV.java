@@ -4,9 +4,9 @@ import com.opencsv.bean.CsvBindByName;
 
 public class BatsmanStatsCSV {
 
-	@CsvBindByName(column = "POS")
+	@CsvBindByName(column = "POS", required = true)
 	private int position;
-	@CsvBindByName(column = "PLAYER")
+	@CsvBindByName(column = "PLAYER", required = true)
 	private String player;
 	@CsvBindByName(column = "Mat")
 	private int matches;
