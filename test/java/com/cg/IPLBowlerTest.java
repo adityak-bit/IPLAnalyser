@@ -54,4 +54,10 @@ public class IPLBowlerTest {
 		sortedList = iplAnalyser.sortBowlingData(bowlingList, BowlingDataSorter.TOP_AVG_WITH_BEST_SR);
 		Assert.assertEquals("Andrew Tye", sortedList.get(98).getPlayer());
 	}
+	
+	@Test
+	public void givenBowlingData_shouldReturnMaxWicketsWithBestAvg() {
+		sortedList = iplAnalyser.sortBowlingData(bowlingList, BowlingDataSorter.MAX_WICKET_WITH_BEST_BOWLING_AVG);
+		Assert.assertEquals("Deepak Chahar", sortedList.get(98).getPlayer());
+	}
 }
