@@ -17,4 +17,7 @@ public class BattingDataSorter {
 	public static Comparator<BatsmanStatsCSV> MAX_RUN_WITH_BEST_AVG = Comparator
 			                                                  .comparing(BatsmanStatsCSV::getRuns)
 			                                                  .thenComparing(TOP_BATTING_AVG );
+	public static Comparator<BatsmanStatsCSV> MAX_HUNDRED_WITH_BEST_AVG = Comparator
+			                                                  .comparing(BatsmanStatsCSV::getHundreds)
+			                                                  .thenComparing(TOP_BATTING_AVG);
 }
