@@ -52,6 +52,6 @@ public class IPLBowlerTest {
 	@Test
 	public void givenBowlingData_shouldReturnTopAvgWithBestSR() {
 		sortedList = iplAnalyser.sortBowlingData(bowlingList, BowlingDataSorter.TOP_AVG_WITH_BEST_SR);
-		Assert.assertEquals("Krishnappa Gowtham", sortedList.get(98).getPlayer());
+		Assert.assertEquals("Andrew Tye", sortedList.get(98).getPlayer());
 	}
 }
