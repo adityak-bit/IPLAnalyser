@@ -40,6 +40,6 @@ public class IPLBowlerTest {
 	@Test
 	public void givenBowlingData_shouldReturnTopEconomyRate() {
 		sortedList = iplAnalyser.sortBowlingData(bowlingList, BowlingDataSorter.TOP_ECONOMY_RATE);
-		Assert.assertEquals("Ben Cutting", sortedList.get(98).getPlayer());
+		Assert.assertEquals("Mayank Markande", sortedList.get(100).getPlayer());
 	}
 }
