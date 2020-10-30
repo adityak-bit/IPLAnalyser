@@ -61,4 +61,17 @@ public class IPLBatsmanTest {
 		sortedList = iplAnalyser.sortBattingData(battingList, BattingDataSorter.MAX_RUN_WITH_BEST_AVG);
 		Assert.assertEquals("David Warner ", sortedList.get(100).getPlayer());
 	}
+	
+	@Test
+	public void givenBattingData_shouldReturnMaxHunderedWithBestAvg() {
+		sortedList = iplAnalyser.sortBattingData(battingList, BattingDataSorter.MAX_RUN_WITH_BEST_AVG);
+		Assert.assertEquals("David Warner ", sortedList.get(100).getPlayer());
+	}
+	
+	@Test
+	public void givenBattingData_shouldReturnBestAvgWithZeroHalfOrFullCentury() {
+		sortedList = iplAnalyser.sortBattingData(battingList, BattingDataSorter.ZER0_HALF_OR_FULL_CENTURY_NUT_BEST_AVG);
+		Assert.assertEquals("Marcus Stoinis", sortedList.get(100).getPlayer());
+	}
+
 }

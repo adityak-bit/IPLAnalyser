@@ -17,4 +17,11 @@ public class BattingDataSorter {
 	public static Comparator<BatsmanStatsCSV> MAX_RUN_WITH_BEST_AVG = Comparator
 			                                                  .comparing(BatsmanStatsCSV::getRuns)
 			                                                  .thenComparing(TOP_BATTING_AVG );
+	public static Comparator<BatsmanStatsCSV> MAX_HUNDRED_WITH_BEST_AVG = Comparator
+			                                                  .comparing(BatsmanStatsCSV::getHundreds)
+			                                                  .thenComparing(TOP_BATTING_AVG);
+	public static Comparator<BatsmanStatsCSV> ZER0_HALF_OR_FULL_CENTURY_NUT_BEST_AVG = Comparator
+			.comparing(batsman -> 
+             ( batsman.getHundreds() == 0 && batsman.getFiftys() == 0)?
+             batsman.getAverage(): 0.0);
 }

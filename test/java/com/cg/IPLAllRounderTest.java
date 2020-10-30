@@ -38,4 +38,5 @@ public class IPLAllRounderTest {
 	    Collections.reverse(sortedList);
 		Assert.assertEquals("Andre Russell", sortedList.get(0).getPlayer());
 	}
+
 }
