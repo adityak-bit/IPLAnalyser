@@ -46,6 +46,6 @@ public class IPLBowlerTest {
 	@Test
 	public void givenBowlingData_shouldReturnTopStrikeRateWith5And4Wickets() {
 		sortedList = iplAnalyser.sortBowlingData(bowlingList, BowlingDataSorter.TOP_SR_WITH_5W_AND_4W);
-		Assert.assertEquals("Krishnappa Gowtham", sortedList.get(98).getPlayer());
+		Assert.assertEquals("Alzarri Joseph", sortedList.get(100).getPlayer());
 	}
 }
